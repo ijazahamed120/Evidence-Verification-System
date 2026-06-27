@@ -106,8 +106,11 @@ router.post("/verify/:id", upload.single("evidence"), (req, res) => {
         });
     }
 
-    const fileBuffer = fs.readFileSync(req.file.path);
+    const path = require("path");
 
+    const absolutePath = path.join(__dirname, "../uploads", req.file.filename);
+
+    const fileBuffer = fs.readFileSync(absolutePath);
     const uploadedHash = crypto
         .createHash("sha256")
         .update(fileBuffer)
