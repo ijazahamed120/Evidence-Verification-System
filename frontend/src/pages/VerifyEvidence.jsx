@@ -20,7 +20,7 @@ function VerifyEvidence() {
 
         try {
             const response = await axios.post(
-                `https://evidence-verification-system.onrender.com/api/auth/${id}`,
+                `https://evidence-verification-system.onrender.com/api/evidence/verify/${id}`,
                 formData
             );
 

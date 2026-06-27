@@ -48,7 +48,7 @@ function Dashboard() {
             try {
 
                 const response = await axios.get(
-                    "https://evidence-verification-system.onrender.com/api/auth/recent"
+                    "https://evidence-verification-system.onrender.com/api/evidence/recent"
                 );
 
                 setRecentEvidence(response.data);
@@ -68,7 +68,7 @@ function Dashboard() {
     const fetchDashboard = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/evidence/dashboard"
+                "https://evidence-verification-system.onrender.com/api/evidence/dashboard"
             );
 
             setStats(response.data);
