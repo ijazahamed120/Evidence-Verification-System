@@ -19,7 +19,7 @@ function History() {
     const fetchHistory = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/evidence/history"
+                "https://evidence-verification-system.onrender.com/api/evidence/history"
             );
 
             setHistory(response.data);
@@ -158,7 +158,7 @@ function History() {
                                     <td>
 
                                         <img
-                                            src={`http://localhost:5000/uploads/${item.fileName}`}
+                                            src={`https://evidence-verification-system.onrender.com/uploads/${item.fileName}`}
                                             alt="Evidence"
                                             width="70"
                                             height="70"
@@ -169,7 +169,7 @@ function History() {
                                             }}
                                             onClick={() =>
                                                 window.open(
-                                                    `http://localhost:5000/uploads/${item.fileName}`,
+                                                    `https://evidence-verification-system.onrender.com/uploads/${item.fileName}`,
                                                     "_blank"
                                                 )
                                             }
@@ -219,7 +219,7 @@ function History() {
                                             <button
                                                 onClick={() =>
                                                     window.open(
-                                                        `http://localhost:5000/api/evidence/report/${item.id}`,
+                                                        `https://evidence-verification-system.onrender.com/api/auth/${item.id}`,
                                                         "_blank"
                                                     )
                                                 }

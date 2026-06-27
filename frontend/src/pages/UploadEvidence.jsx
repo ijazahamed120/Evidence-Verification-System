@@ -23,7 +23,7 @@ function UploadEvidence() {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/evidence/upload",
+                "https://evidence-verification-system.onrender.com/api/auth/upload",
                 formData
             );
 
